@@ -1,0 +1,3 @@
+# Closure Issue in setTimeout Loop
+
+This repository demonstrates a common JavaScript closure issue that occurs when using `setTimeout` within a loop.  The problem stems from how variables are captured in closures.  The code in `bug.js` incorrectly logs the final value of `i` (10) for each iteration, instead of the expected sequence 0-9.  The solution in `bugSolution.js` provides a correct implementation using an immediately invoked function expression (IIFE) to create a new scope for each iteration, thus capturing the correct value of `i` for each timeout.
